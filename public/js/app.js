@@ -376,6 +376,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   mode: 'history',
+  linkActiveClass: 'is-active',
   routes: [{
     path: '/',
     component: _components_Logistics__WEBPACK_IMPORTED_MODULE_1__["default"]

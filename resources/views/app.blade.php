@@ -13,10 +13,7 @@
     </head>
     <body>
         <div id="app">
-            <router-link to="/" exact>Logistics</router-link>
-            <router-link to="/orders">Orders</router-link>
-            <router-link to="/products">Products</router-link>
-            <router-view></router-view>
+            @yield('content')
         </div>
 
         <script src="{{ mix('js/manifest.js') }}" defer></script>
