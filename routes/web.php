@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/{any}', function () {
+Route::get('/', function () {
     return view('main');
-})->where('any', '.*');
+});
+
+Route::get('/products', 'ProductController@index');
+Route::post('/products', 'ProductController@store');
+Route::put('/products/{id}', 'ProductController@update')->where('id', '[0-9]+');
+Route::delete('/products/{id}', 'ProductController@destroy')->where('id', '[0-9]+');
