@@ -20,10 +20,11 @@ class CreateOrdersTable extends Migration
             $table->string('invoice_number')->nullable();
             $table->string('tracking_number')->nullable();
             $table->integer('total_amount')->nullable();
+            $table->tinyInteger('status')->default(0);
             $table->timestamp('shipping_date')->nullable();
             $table->timestamp('delivery_date')->nullable();
-            $table->tinyInteger('shipping_method');
-            $table->unsignedInteger('owner');
+            $table->tinyInteger('shipping_method')->nullable();
+            $table->unsignedInteger('user_id');
             $table->softDeletes('deleted_at', 0);
         });
     }
